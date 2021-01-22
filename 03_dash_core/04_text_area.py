@@ -1,4 +1,4 @@
-
+# Etap6. Odcinek: Komponent Pole Tekstkowe - Text Area
 
 import dash
 import dash_core_components as dcc
