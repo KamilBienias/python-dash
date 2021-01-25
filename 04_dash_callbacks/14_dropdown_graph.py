@@ -27,6 +27,7 @@ app.layout = html.Div([
     )
 ])
 
+
 @app.callback(
     Output('graph-1', 'figure'),
     [Input('drop-1', 'value')]
@@ -42,9 +43,9 @@ def update_graph(value):
         # tutaj x jest domyslnie 0,1,2,3,4 bo nie podany
         {'y': data_dict[value],
          'type': 'scatter',
-         'fill': 'tozeroy',  # wypelnenie pod wykresem
-         }
-         ],
+         'fill': 'tozeroy'}  # wypelnenie pod wykresem
+    ],
+        # sam zrobilem layout
         "layout": go.Layout(
             title_text="Wykres dla " + value,
             xaxis={
