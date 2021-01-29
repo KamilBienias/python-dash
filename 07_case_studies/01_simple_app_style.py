@@ -26,13 +26,13 @@ index_page = html.Div([
     # sekcja z linkami do podstron
     html.Div([
         html.Hr(),
-        dcc.Link('Wybierz technologię', href='/tech'),
+        dcc.Link('Choose technology', href='/tech'),
         html.Br(),
-        dcc.Link('Wyświetl logo', href='/logo'),
+        dcc.Link('Display logo', href='/logo'),
         html.Hr()
     ], style={"background-color": "white"}  # otacza linki "Wybierz technologie" i "Wyswietl logo"
     ),
-    html.H6('Korzystasz z aplikacji w fazie developmentu.')
+    html.H6('You are using the application in the development phase.')
 ], style={
     "textAlign": "center",
     "fontSize": 36,
@@ -50,7 +50,7 @@ tab_selected_style = {
 
 tech_layout = html.Div([
     html.Div([
-        html.H4('Wybierz technologię z podanych poniżej'),
+        html.H4('Choose a technology from listed below'),
         html.Hr(),
         dcc.Tabs(
             id='tech-1-tabs',
@@ -68,13 +68,13 @@ tech_layout = html.Div([
     html.Div(id='tech-1-div'),
     html.Hr(),
     html.Div([
-        dcc.Link('Wróć do MENU', href='/')
+        dcc.Link('Back to MENU', href='/')
     ])
 ], style={"fontSize": 20})
 
 logo_layout = html.Div([
     html.Div([
-        html.H4('Wybierz technologię, aby wyświetlić logo')
+        html.H4('Choose technology to display the logo')
     ], style={
         "fontSize": 32
     }),
@@ -87,7 +87,7 @@ logo_layout = html.Div([
     # sekcja wynikowa, to co wybralem w radiobutton
     html.Div(id='logo-1-div'),
     html.Hr(),
-    dcc.Link('Wróć do MENU', href='/')
+    dcc.Link('Back to MENU', href='/')
 ], style={
     "textAlign": "center",
     "fontSize": 20
@@ -153,7 +153,7 @@ def tech_1_tabs(value):
         ])
 
 # nie dziala wget
-# wget -O python-logo.png "https://drive.google.com/uc?export=download$id=1bWIq24W0Mnqw61e7Nwxu5rPccNnCZD7n"
+# wget -O python-logo.jpeg "https://drive.google.com/uc?export=download$id=1bWIq24W0Mnqw61e7Nwxu5rPccNnCZD7n"
 img_python = '/home/dell/PycharmProjects/dash-tut/07_case_studies/python-logo.jpeg'
 img_db = '/home/dell/PycharmProjects/dash-tut/07_case_studies/db-logo.png'
 img_java = '/home/dell/PycharmProjects/dash-tut/07_case_studies/java-logo.png'
@@ -171,7 +171,7 @@ encoded_img_java = base64.b64encode(open(img_java, 'rb').read())
 def logo_1_radio(value):
     if value is None:
         return html.Div([
-            html.H6('Wybierz jedną z opcji, aby wyświetlić logo!')
+            html.H6('Select one of the options to display the logo')
         ])
     elif value == 'Python':
         return html.Div([
