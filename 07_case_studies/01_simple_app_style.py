@@ -176,17 +176,20 @@ def logo_1_radio(value):
     elif value == 'Python':
         return html.Div([
             html.Img(src=f'data:image/jpeg;base64,{encoded_img_python.decode()}',
-                     style={'width': '300px'})
+                     style={'width': '300px'},
+                     alt="Python logo not found")
         ])
     elif value == 'SQL':
         return html.Div([
             html.Img(src=f'data:image/png;base64,{encoded_img_db.decode()}',
-                     style={'width': '300px'})
+                     style={'width': '300px'},
+                     alt="SQL logo not found")
         ])
     elif value == 'Java':
         return html.Div([
             html.Img(src=f'data:image/png;base64,{encoded_img_java.decode()}',
-                     style={'width': '300px'})
+                     style={'width': '300px'},
+                     alt="Java logo not found")
         ])
 
 
